@@ -1,0 +1,64 @@
+// Define the color variables
+$color-primary: #FFF; // White
+$color-secondary: #FF6060; // Light red/pink
+$color-tertiary: #F7F7F7; // Very light gray
+
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.collapse {
+  background-color: $color-tertiary;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  &_title {
+    @include flex(row, space-between, center);
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: clamp(13px, 2vw, 18px);
+    padding: 10px 15px;
+    cursor: pointer;
+
+    .arrow {
+      transition: transform 0.3s ease;
+      width: 24px;
+
+      @media screen and (max-width: 1230px) {
+        width: 12px;     
+      }
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    visibility: visible;
+    opacity: 1;
+  
+    padding: 0 10px 20px 10px;
+    color: $color-secondary;
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.2s ease-in-out;
+  }
+
+  &_content_hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: height 0;
+  }
+
+  .rotated {
+    transform: rotate(-180deg); 
+  }
+
+}
+
+

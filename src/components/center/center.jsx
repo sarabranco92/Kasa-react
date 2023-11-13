@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/App.css";
+import "../center/_center.scss";
 
 // composant qui gère la marge gauche et droite de 100% sauf le Footer, et wrappe le contenu enfant
 function Center({children}) {

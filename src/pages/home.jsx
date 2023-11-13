@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../components/navbar';
-import Banner from '../components/banner';
-import Footer from '../components/footer';
-import Center from '../components/center';
-import Cards from '../components/cards'
-import "../styles/App.css";
+import Navbar from '../components/navbar/navbar';
+import Banner from '../components/banner/banner';
+import Footer from '../components/footer/footer';
+import Center from '../components/center/center';
+import Cards from '../components/cards/cards';
+import "../styles/App.scss"
 
 
 function Home() {
@@ -12,10 +12,7 @@ function Home() {
     <div className='home'>
       <Center>
         <Navbar />
-        <Banner>
-          <div className="banner">
-          </div>
-        </Banner>
+        <Banner/>
         <Cards />
       </Center>
       <Footer />

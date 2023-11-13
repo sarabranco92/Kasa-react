@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../components/navbar';
-import Center from '../components/center';
+import Navbar from '../components/navbar/navbar';
+import Center from '../components/center/center';
 
-import "../styles/App.css"
+import "../styles/App.scss"
 
 function FicheLogement() {
     return (
