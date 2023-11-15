@@ -1,21 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import records from "../../data/logement.json"
-import "../cards/_cards.scss";
-
+import records from "../../data/logement.json"; // Ensure the path to your JSON data is correct
+import "../cards/_cards.scss"; // Ensure the path to your SCSS file is correct
 
 const Cards = () => {
     return (
         <div className="logements">
-
-            { }
             {records.map((record) => {
                 const { id, cover, title } = record;
 
-                // affiche la fiche logement sur la page d'accueil
+                // Use backticks for template literals to embed expressions
                 return (
                     <div className="fiche-logement" key={id}>
-                        <Link to={{ pathname: "/FicheLogement", search: "?_id=" + id }}>
+                        <Link to={`/fiche_log/${id}`}>
                             <img src={cover} alt={title} />
                             <h3>{title}</h3>
                         </Link>
@@ -23,7 +20,7 @@ const Cards = () => {
                 )
             })}
         </div>
-    )
-}
+    );
+};
 
-export default Cards
+export default Cards;

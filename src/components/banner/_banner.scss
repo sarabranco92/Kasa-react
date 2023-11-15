@@ -25,12 +25,29 @@
     }
 
 
-      
   @media (max-width: 375px) {
     .banner-text {
       font-size: 24px;
+     left: 55%;
+     right: -50%;
+    }
+
+    .banner-image{
+      height: 111px;
     }
   }
-  
 
-  }
+  @media (max-width: 800px) {
+    .banner-image {
+        
+        height: 111px; 
+    }
+
+    .banner-text {
+        
+        font-size: 24px;
+        left: 55%;
+        right: -50%;
+    }
+} 
+}

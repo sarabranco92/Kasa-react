@@ -1,19 +1,23 @@
 import React from 'react';
-import Navbar from '../components/navbar/navbar';
-import Center from '../components/center/center';
+import { useParams } from 'react-router-dom';
+import records from "../data/logement.json";
 
-import "../styles/App.scss"
+const FicheLogement = () => {
+  const { id } = useParams();
+  const record = records.find(r => r.id === id);
 
-function FicheLogement() {
-    return (
-      
-      <div>
-        <Center>
-        <Navbar />
-      </Center>
-      </div>
-    );
+  if (!record) {
+    return <div>Logement not found</div>;
   }
-  
-  export default FicheLogement;
-  
+
+  // Display the details of the record
+  return (
+    <div>
+      <h1>{record.title}</h1>
+      {/* other details */}
+    </div>
+  );
+};
+
+export default FicheLogement;
+
