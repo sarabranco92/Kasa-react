@@ -8,7 +8,7 @@ function Collapse({ title, content }) {
     const [toggle, setToggle] = useState(false);
 
     const handleToggle = () => {
-        setToggle(!toggle); // This will change the state and cause a re-render.
+        setToggle(!toggle); 
     };
 
     return (
@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
             <h3 className='collapse_title' onClick={handleToggle}>
                 {title}
                 <img 
-                    className={`arrow ${toggle ? 'rotated' : ''}`} // 'rotated' class when toggle is true
+                    className={`arrow ${toggle ? 'rotated' : ''}`} 
                     src={arrow}
                     alt="Toggle content visibility" 
                 />

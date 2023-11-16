@@ -18,7 +18,7 @@
 .ArrowSliderLeft {
    position: absolute;
    cursor: pointer;
-   left: 2%; // Changed from right to left
+   left: 2%; 
    @media (max-width: 1001px) {
       width: 7%;
    }
@@ -27,7 +27,7 @@
 .ArrowSliderRight {
    position: absolute;
    cursor: pointer;
-   right: 2%; // Changed from left to right
+   right: 2%;
    @media (max-width: 1001px) {
       width: 7%;
    }

@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import records from "../../data/logement.json"; // Ensure the path to your JSON data is correct
-import "../cards/_cards.scss"; // Ensure the path to your SCSS file is correct
-
+import records from "../../data/logement.json"; 
+import "../cards/_cards.scss"; 
 const Cards = () => {
     return (
         <div className="logements">
             {records.map((record) => {
                 const { id, cover, title } = record;
 
-                // Use backticks for template literals to embed expressions
+    
                 return (
                     <div className="fiche-logement" key={id}>
                         <Link to={`/fiche_log/${id}`}>

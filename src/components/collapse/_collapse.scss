@@ -1,8 +1,7 @@
-// Define the color variables
-$color-primary: #FFF; // White
-$color-secondary: #FF6060; // Light red/pink
-$color-tertiary: #F7F7F7; // Very light gray
 
+$color-primary: #FFF; 
+$color-secondary: #FF6060; 
+$color-tertiary: #F7F7F7;
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -48,7 +47,7 @@ $color-tertiary: #F7F7F7; // Very light gray
 
     p {
       
-        margin-bottom: 0; // Remove the bottom margin from the last paragraph
+        margin-bottom: 0; 
       }
     }
 
@@ -65,7 +64,7 @@ $color-tertiary: #F7F7F7; // Very light gray
 
     .description-content {
       @include flex(column, flex-start, stretch);
-      gap: 20px; // Adds space between the collapsible items
+      gap: 20px; 
       max-width: 1100px;
       margin: 40px auto;
 
@@ -74,7 +73,7 @@ $color-tertiary: #F7F7F7; // Very light gray
         @include flex(column, flex-start, stretch);
         background-color: $color-tertiary;
         border-radius: 5px;
-        overflow: hidden; // Keeps children rounded corners within the parent
+        overflow: hidden; 
 
       }
     }

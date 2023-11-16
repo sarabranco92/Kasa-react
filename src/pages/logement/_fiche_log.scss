@@ -60,10 +60,10 @@
         justify-content: space-between;
         margin: 20px 0;
       
-        // Styles for each tab section
+       
         &__description, &__equipement {
-          flex: 1; // Each section takes up half the width
-          margin-right: 60px; // Adds space between the tabs
+          flex: 1;
+          margin-right: 60px; 
 
       
           &:last-child {

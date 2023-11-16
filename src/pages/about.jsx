@@ -3,9 +3,9 @@ import Center from '../components/center/center';
 import Navbar from '../components/navbar/navbar';
 import Collapse from '../components/collapse/collapse';
 import Footer from '../components/footer/footer';
-import aboutData from "../data/about.json"; // Make sure the path is correct
+import aboutData from "../data/about.json"; 
 import imgBannerAbout from "../assets/banner-about.png";
-import "../components/banner/_banner.scss"; // Ensure this import path is correct
+import "../components/banner/_banner.scss"; 
 
 
 function About() {
