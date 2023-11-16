@@ -9,7 +9,7 @@ import "../styles/App.scss"
 
 function Home() {
   return (
-    <div className='home'>
+    <div>
       <Center>
         <Navbar />
         <Banner/>

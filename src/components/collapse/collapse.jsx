@@ -4,7 +4,6 @@ import '../collapse/_collapse.scss';
 import arrow from '../../assets/arrow-up.png';
 
 
-
 function Collapse({ title, content }) {
     const [toggle, setToggle] = useState(false);
 

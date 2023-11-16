@@ -1,0 +1,78 @@
+// AccommodationDetails.scss
+
+.InformationSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+
+   
+    .AccommodationInfo {
+        width: 60%;
+
+        .Title {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .Location {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .TagsList {
+            list-style: none;
+            padding: 0;
+
+            .TagItem {
+                display: inline-block;
+                background-color: #ff5a5f;
+                color: white;
+                padding: 0.25rem 0.75rem;
+                margin: 0.25rem;
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .OwnerInfo {
+        width: 40%;
+        align-self: center;
+
+        .OwnerName {
+            margin-right: 1rem;
+        }
+
+        .OwnerImage {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+    }
+
+    
+
+    }
+    .description-content {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+      
+        // Styles for each tab section
+        &__description, &__equipement {
+          flex: 1; // Each section takes up half the width
+          margin-right: 60px; // Adds space between the tabs
+
+      
+          &:last-child {
+            margin-right: 0;
+          }
+      
+         
+          }
+        }
+      
+      
+    

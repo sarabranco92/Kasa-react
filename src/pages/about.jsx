@@ -1,5 +1,4 @@
-// You can remove the React import if you're using React 17+ and no hooks or React features are used here
-// import React from 'react';
+
 import Center from '../components/center/center';
 import Navbar from '../components/navbar/navbar';
 import Collapse from '../components/collapse/collapse';
@@ -11,7 +10,7 @@ import "../components/banner/_banner.scss"; // Ensure this import path is correc
 
 function About() {
   return (
-    <div className="about">
+    <div >
       <Center>
         <Navbar />
         <div className='banner'>

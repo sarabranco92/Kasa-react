@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Import Pages
 import Home from './pages/home';
-import FicheLogement from './pages/fiche_log';
+import FicheLogement from './pages/logement/fiche_log';
 import PageError from './pages/page_error';
 import About from './pages/about';
 
