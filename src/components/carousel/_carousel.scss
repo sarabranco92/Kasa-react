@@ -1,7 +1,8 @@
+@import '../../utils/mixin';
+@import '../../utils/variavel';
+
 .ContSlider {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   @include flex(column, center, center);
    position: relative;
 }
 
@@ -20,7 +21,7 @@
    cursor: pointer;
    left: 2%; 
    @media (max-width: 1001px) {
-      width: 7%;
+      width: 6%;
    }
 }
 
@@ -29,13 +30,13 @@
    cursor: pointer;
    right: 2%;
    @media (max-width: 1001px) {
-      width: 7%;
+      width: 6%;
    }
 }
 
 .CountSlider {
    position: absolute;
    bottom: 0%;
-   color: white;
+   color: $color-primary;
    font-weight: 700;
 }

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react'; // Import useState and useEffect
+
 import records from "../../data/logement.json";
 
 import Carousel from '../../components/carousel/carousel';
@@ -9,20 +10,23 @@ import Rating from '../../components/rating/rating';
 import Footer from '../../components/footer/footer';
 import Center from '../../components/center/center';
 import Navbar from '../../components/navbar/navbar';
+
 import '../logement/_fiche_log.scss';
 
 function FicheLogement() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  let navigate = useNavigate();
 
   useEffect(() => {
     const record = records.find(r => r.id === id);
-    setLogement(record || null);
-  }, [id]);
+    if (!record) {
+      navigate(<Error />, { replace: true });
+    } else {
+      setLogement(record); // No need for '|| null' since 'record' is already null-checked
+    }
+  }, [id, navigate]);
 
-  if (!logement) {
-    return <Error />; 
-  }
 
   const equipments = logement.equipments;
 
@@ -43,8 +47,10 @@ function FicheLogement() {
             </ul>
           </div>
           <div className='OwnerInfo'>
-            <p className='OwnerName'>{logement.host?.name}</p>
-            <img className='OwnerImage' src={logement.host?.picture} alt={logement.host?.name} />
+            <div className='Owner'>
+              <p className='OwnerName'>{logement.host?.name}</p>
+              <img className='OwnerImage' src={logement.host?.picture} alt={logement.host?.name} />
+            </div>
             <Rating rating={logement.rating} />
           </div>
         </section>
@@ -64,7 +70,7 @@ function FicheLogement() {
         </div>
       </Center>
       <Footer />
-      </div>
+    </div>
   );
 }
 

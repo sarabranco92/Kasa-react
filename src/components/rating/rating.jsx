@@ -1,16 +1,9 @@
-import './_rating.scss';
-
-
 import StarActive from '../../assets/star-active.png';
 import StarInactive from '../../assets/star-inactive.png';
-
-
-
-
-
+import '../rating/_rating.scss'
 
 function Rating({ rating }) { 
-   const stars = []; // Creer un tableau pour stocker les étoiles
+   const stars = []; 
  
    for (let i = 1; i <= 5; i++) { 
       if (i <= rating) {
