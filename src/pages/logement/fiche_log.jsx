@@ -1,51 +1,63 @@
+// Importation des hooks et outils nécessaires de React et react-router-dom
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react'; 
 
+// Importation des données des logements depuis un fichier JSON local
 import records from "../../data/logement.json";
 
+// Importation des composants pour l'interface utilisateur
 import Carousel from '../../components/carousel/carousel';
 import Collapse from '../../components/collapse/collapse';
-import Error from '../../components/error/error_comp';
 import Rating from '../../components/rating/rating';
 import Footer from '../../components/footer/footer';
 import Center from '../../components/center/center';
 import Navbar from '../../components/navbar/navbar';
 
+// Importation des styles spécifiques pour la page du logement
 import '../logement/_fiche_log.scss';
 
+// Déclaration du composant fonctionnel FicheLogement
 function FicheLogement() {
-  // Récupération de l'identifiant du logement à partir de l'URL
+  // Extraction de l'ID du logement depuis l'URL
   const { id } = useParams();
+  // Déclaration des états pour le logement et la gestion des erreurs
   const [logement, setLogement] = useState(null);
+  const [isError, setIsError] = useState(false);
   const navigate = useNavigate();
 
-  // Chargement des données du logement correspondant à l'id
+  // Effet pour charger les données du logement dès le montage du composant
   useEffect(() => {
     const record = records.find(r => r.id === id);
     if (!record) {
-      // Si aucun logement n'est trouvé, rediriger vers un composant d'erreur
-      navigate(<Error />, { replace: true });
+      // En cas d'absence du logement, on déclenche une erreur
+      setIsError(true);
     } else {
-      // Si trouvé, mettre à jour l'état avec les informations du logement
+      // Si le logement est trouvé, on met à jour l'état avec ses détails
       setLogement(record); 
     }
   }, [id, navigate]);
 
-  // Affichage conditionnel en attendant le chargement des données
-  if (!logement) {
-    return null; 
+  // Redirection en cas d'erreur
+  if (isError) {
+    navigate('/otherpages', { replace: true });
+    return null; // Ceci est optionnel car navigate redirige la page
   }
 
-  // Rendu du composant avec les détails du logement
+  // Affichage d'un loader pendant le chargement des données
+  if (!logement) {
+    return <>Loader</>; // Remplacer par un composant de chargement réel
+  }
+
+  // Rendu de la page de détails du logement
   return (
     <div className="AccommodationDetails">
       <Center>
         <Navbar />
-
+        {/* Carousel pour afficher les images du logement */}
         {logement.pictures && <Carousel images={logement.pictures} />}
         <section className='InformationSection'>
+          {/* Informations principales du logement */}
           <div className='AccommodationInfo'>
-            {/* Affichage du titre, de la localisation et des tags du logement */}
             <h1 className='Title'>{logement.title}</h1>
             <p className='Location'>{logement.location}</p>
             <ul className='TagsList'>
@@ -64,18 +76,19 @@ function FicheLogement() {
           </div>
         </section>
         <div className="description-content">
-          {/* Contenu détaillé du logement avec des composants Collapse */}
+          {/* Composants Collapse pour la description et les équipements */}
           <div className="description-content__description">
-            <Collapse
-              title="Description"
-              content={logement.description}
-            />
+            <Collapse title="Description" content={logement.description} />
           </div>
           <div className="description-content__equipement">
-            {logement.equipments && <Collapse
-              title="Équipements"
-              content={logement.equipments.join(', ')} // Assumant que equipments est un tableau
-            />}
+            {logement.equipments && (
+              <Collapse
+                title="Équipements"
+                content={logement.equipments.map((item, index) => (
+                  <div key={index}>{item}</div>
+                ))}
+              />
+            )}
           </div>
         </div>
       </Center>
@@ -84,5 +97,5 @@ function FicheLogement() {
   );
 }
 
-
+// Exportation du composant FicheLogement pour son utilisation dans l'application
 export default FicheLogement;

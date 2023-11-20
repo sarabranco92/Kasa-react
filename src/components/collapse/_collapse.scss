@@ -2,28 +2,34 @@
 @import '../../utils/variavel';
 
 
+.collapse-container{
+  margin-top: 20px;
+
+}
+
 .collapse {
   max-width: 1100px;
   margin: 0 auto;
- 
+  margin-bottom: 10px;
 
+  
   &_title {
     @include flex(row, space-between, center);
     background-color: $color-secondary;
     color: $color-primary;
     border-radius: 5px;
-    font-size: clamp(13px, 2vw, 16px);
     font-weight: 200;
+    font-size: clamp(13px, 2vw, 18px);
     padding: 10px 15px;
-    margin-bottom: 0;
+    margin:0;
     cursor: pointer;
+    
 
     .arrow {
-      transition: transform 0.7s ease;
-      width: 24px;
-
+      transition: transform 0.3s ease;
+      
       @media(max-width: 1230px) {
-        width: 12px;
+        width: 18px;
       }
     }
   }
@@ -34,41 +40,41 @@
     visibility: visible;
     opacity: 1;
     background-color: $color-tertiary;
-    font-size: clamp(13px, 2vw, 16px);
+    font-size: clamp(13px, 2vw, 18px);
     padding: 0 20px 20px 20px;
     color: $color-secondary;
-    transition: transform 0.7s ease, visibility  0.7s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
     
-
     p {
         margin-bottom: 0; 
       }
     }
 
+    &_content_visible {
+      animation: fadeInExpand 0.5s forwards; // Use forwards to maintain the final state
+    }
+  
     &_content_hidden {
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-      transition: height 0;
+      animation: fadeOutCollapse 0.5s forwards;
     }
 
     .rotated {
       transform: rotate(-180deg);
     }
-
   }
-      
-       
-      
+         
   .description-content {
     display: flex;
-    justify-content: space-between;
+   
+   
    
     &__description,
     &__equipement {
-        flex: 1;
-        
-        margin-right: 60px; // Last child margin-right is already 0
+        flex: 1; 
+        margin-right: 60px; 
         &:last-child {
             margin-right: 0;
             
@@ -76,6 +82,28 @@
     }
 }
  
+
+@keyframes fadeInExpand {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 1000px; 
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutCollapse {
+  0% {
+    max-height: 1000px; 
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+  }
+}
 
     @media (max-width: 760px) {
 
