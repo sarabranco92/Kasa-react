@@ -1,22 +1,22 @@
 .InformationSection {
     display: flex;
     justify-content: space-between;
-    margin: 16px; // 1rem assuming a base font-size of 16px
+    margin: 16px; 
     color: #ff5a5f;
 
     .AccommodationInfo {
-        width: 60%; // 60% of 768px
+        width: 60%; 
 
         .Title {
-            font-size: 36px; // 1.5rem with base font-size of 16px
+            font-size: 36px; 
             color: #ff5a5f;
             margin: 0;
         }
 
         .Location {
             color: #ff5a5f;
-            font-size: 26px; // 1rem with base font-size of 16px
-            margin:0; // 0.5rem with base font-size of 16px
+            font-size: 26px; 
+            margin:0;
         }
 
         .TagsList {
@@ -30,10 +30,10 @@
                 background-color: #ff5a5f;
                 color: white;
                 width: 115px; 
-                padding: 4px 12px; // 0.25rem 0.75rem with base font-size of 16px
-                margin: 4px; // 0.25rem with base font-size of 16px
-                border-radius: 100px; // 0.25rem with base font-size of 16px
-                font-size: clamp(12px, 2vw, 12px); // 0.75rem with base font-size of 16px
+                padding: 4px 12px; 
+                margin: 4px; 
+                border-radius: 100px; 
+                font-size: clamp(12px, 2vw, 12px); 
             }
         }
     }
@@ -53,12 +53,11 @@
 
         .OwnerName {
             margin-right: 16px; 
-            font-size: 18px;// 1rem with base font-size of 16px
         }
 
         .OwnerImage {
-            width: 64px; // 3rem with base font-size of 16px
-            height: 64px; // 3rem with base font-size of 16px
+            width: 64px; 
+            height: 64px; 
             border-radius: 50%;
             object-fit: cover;
         }
@@ -69,17 +68,16 @@
 @media (max-width: 760px) {
     .InformationSection {
         flex-direction: column;
-        margin: 8px; // 0.5rem with base font-size of 16px
+        margin: 8px; 
 
         .AccommodationInfo {
-            width: 100%; // Full width
-
+            width: 100%; 
             .Title {
-                font-size: 18px; // 1.2rem with base font-size of 16px
+                font-size: 18px; 
             }
 
             .Location {
-                font-size: 14px; // 0.9rem with base font-size of 16px
+                font-size: 14px; 
             }
 
             .TagsList {
@@ -87,14 +85,14 @@
                 flex-wrap: wrap;
 
                 .TagItem {
-                    padding: 3px 8px; // 0.2rem 0.5rem with base font-size of 16px
-                    font-size: 10px; // 0.65rem with base font-size of 16px
+                    padding: 3px 8px;
+                    font-size: 10px; 
                 }
             }
         }
 
         .OwnerInfo {
-            width: 100%; // Full width
+            width: 100%; 
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
@@ -103,14 +101,14 @@
        
 
             .OwnerName {
-                font-size: 12px; // 1rem with base font-size of 16px
+                font-size: 12px; 
                 flex-grow: 1;
                 text-align: right;
             }
 
             .OwnerImage {
-                width: 32px; // 2.5rem with base font-size of 16px
-                height: 32px; // 2.5rem with base font-size of 16px
+                width: 32px; 
+                height: 32px; 
                 
             }
         }

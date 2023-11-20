@@ -12,14 +12,14 @@
     background-color: $color-secondary;
     color: $color-primary;
     border-radius: 5px;
-    font-weight: 500;
-    font-size: clamp(13px, 2vw, 18px);
+    font-size: clamp(13px, 2vw, 16px);
+    font-weight: 200;
     padding: 10px 15px;
     margin-bottom: 0;
     cursor: pointer;
 
     .arrow {
-      transition: transform 0.3s ease;
+      transition: transform 0.7s ease;
       width: 24px;
 
       @media(max-width: 1230px) {
@@ -34,10 +34,10 @@
     visibility: visible;
     opacity: 1;
     background-color: $color-tertiary;
-    font-size: clamp(13px, 2vw, 18px);
+    font-size: clamp(13px, 2vw, 16px);
     padding: 0 20px 20px 20px;
     color: $color-secondary;
-    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.2s ease-in-out;
+    transition: transform 0.7s ease, visibility  0.7s ease-in-out;
     
 
     p {
@@ -67,6 +67,7 @@
     &__description,
     &__equipement {
         flex: 1;
+        
         margin-right: 60px; // Last child margin-right is already 0
         &:last-child {
             margin-right: 0;

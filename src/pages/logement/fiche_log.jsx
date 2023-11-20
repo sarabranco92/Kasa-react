@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react'; // Import useState and useEffect
+import { useState, useEffect } from 'react'; 
 
 import records from "../../data/logement.json";
 
@@ -14,22 +14,29 @@ import Navbar from '../../components/navbar/navbar';
 import '../logement/_fiche_log.scss';
 
 function FicheLogement() {
+  // Récupération de l'identifiant du logement à partir de l'URL
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
+  // Chargement des données du logement correspondant à l'id
   useEffect(() => {
     const record = records.find(r => r.id === id);
     if (!record) {
+      // Si aucun logement n'est trouvé, rediriger vers un composant d'erreur
       navigate(<Error />, { replace: true });
     } else {
-      setLogement(record); // No need for '|| null' since 'record' is already null-checked
+      // Si trouvé, mettre à jour l'état avec les informations du logement
+      setLogement(record); 
     }
   }, [id, navigate]);
 
+  // Affichage conditionnel en attendant le chargement des données
+  if (!logement) {
+    return null; 
+  }
 
-  const equipments = logement.equipments;
-
+  // Rendu du composant avec les détails du logement
   return (
     <div className="AccommodationDetails">
       <Center>
@@ -38,6 +45,7 @@ function FicheLogement() {
         {logement.pictures && <Carousel images={logement.pictures} />}
         <section className='InformationSection'>
           <div className='AccommodationInfo'>
+            {/* Affichage du titre, de la localisation et des tags du logement */}
             <h1 className='Title'>{logement.title}</h1>
             <p className='Location'>{logement.location}</p>
             <ul className='TagsList'>
@@ -47,6 +55,7 @@ function FicheLogement() {
             </ul>
           </div>
           <div className='OwnerInfo'>
+            {/* Informations sur le propriétaire et la note du logement */}
             <div className='Owner'>
               <p className='OwnerName'>{logement.host?.name}</p>
               <img className='OwnerImage' src={logement.host?.picture} alt={logement.host?.name} />
@@ -55,6 +64,7 @@ function FicheLogement() {
           </div>
         </section>
         <div className="description-content">
+          {/* Contenu détaillé du logement avec des composants Collapse */}
           <div className="description-content__description">
             <Collapse
               title="Description"
@@ -62,10 +72,10 @@ function FicheLogement() {
             />
           </div>
           <div className="description-content__equipement">
-            <Collapse
+            {logement.equipments && <Collapse
               title="Équipements"
-              content={equipments}
-            />
+              content={logement.equipments.join(', ')} // Assumant que equipments est un tableau
+            />}
           </div>
         </div>
       </Center>
@@ -73,5 +83,6 @@ function FicheLogement() {
     </div>
   );
 }
+
 
 export default FicheLogement;

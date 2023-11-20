@@ -3,22 +3,24 @@
 
 .page-error {
     text-align: center;
+    
   
     .titre-error {
       color: $color-secondary;
       font-size: 150px;
-      margin: auto;
+      margin-top: 25%;
     }
   
     .description-error {
       color: $color-secondary;
       display: block;
       font-size: 20px;
+     
     }
   
     .lien-home {
       display: block;
-      margin-top: 150px;
+      margin-top: 100px;
       color: $color-secondary;
     }
   
