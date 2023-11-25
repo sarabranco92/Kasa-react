@@ -1,3 +1,5 @@
+@import '../../utils/mixin';
+@import '../../utils/variavel';
 
 .banner {
     position: relative;
@@ -5,7 +7,7 @@
   
     .banner-image {
       position: relative;
-      height: 220px;
+      height: 200px;
       width: 100%;
       border-radius: 10px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -14,22 +16,22 @@
   
     .banner-text {
       position: absolute;
-      left: 50%;
+      left: 55%;
+      right: -50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      color: var(--colorWhite);
+      color: $color-primary;
       margin: 0;
-      text-align: left;
+      text-align: center;
       font-size: 40px;
       font-weight: 200;
     }
 
 
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     .banner-text {
       font-size: 24px;
-     left: 55%;
-     right: -50%;
+      text-align: left;
     }
 
     .banner-image{
