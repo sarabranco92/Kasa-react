@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+ Projet Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ 
+                                                                                                                                         
+À propos du Projet:
 
-## Available Scripts
+      Kasa est une plateforme de location d'appartements entre particuliers, 
+      leader sur le marché français depuis près de 10 ans.
+      Avec plus de 500 annonces publiées quotidiennement, 
+      Kasa a lancé un projet ambitieux de refonte totale de sa plateforme web
+      pour rester à la pointe de la technologie et de l'innovation.
 
-In the project directory, you can run:
 
-### `yarn start`
+Objectifs du Projet:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En tant que développeur front-end freelance, votre mission est de :
+      Démarrer le projet React et développer l'ensemble de l'application.
+      Créer les composants React et les routes React Router.
+      Suivre les maquettes Figma fournies, en respectant les designs et les contraintes fonctionnelles.
+      Garantir un code de qualité et une application responsive.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Environnement Technique:
 
-### `yarn build`
+      Stack Technique : JavaScript avec NodeJS (back-end) et React (front-end).
+      Back-end / Data : Utilisation de données JSON en l'absence d'un back-end complet.
+      Guidelines : Suivre les coding guidelines de Kasa.
+      Outils : Create React App ou Vite (au choix) pour le bundling.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Design et Fonctionnalités:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+      Maquettes : Disponibles sur Figma avec logique de composants.
+      Galerie d'Images : Comportements spécifiques pour le défilement des photos.
+      Collapse : Comportement dynamique pour les menus déroulants.
+      Ressources : Toutes les ressources nécessaires (logos, icônes) sont exportables depuis Figma.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Utilisation de Sass et Animations
+      Animations CSS : À implémenter pour le menu déroulant.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Compétences Évaluées:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+      Mettre en œuvre des animations CSS.
+      Développer une interface web avec Sass.
+      Configurer la navigation entre les pages de l'application avec React Router.
+      Développer des éléments de l'interface d'un site web avec des composants React.
+      Initialiser une application avec Create React App.
+      
+      
+   ![Capture d'écran 2023-11-30 134514](https://github.com/sarabranco92/Kasa-react/assets/132900005/687339da-5ed0-4448-a23c-a6ad7dd613bf)
