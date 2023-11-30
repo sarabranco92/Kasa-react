@@ -10,6 +10,6 @@ function Banner() {
     </div>
   );
 }
-
+// Exportation du composant Banner pour qu'il puisse être utilisé dans d'autres parties de l'application.
 export default Banner;
 

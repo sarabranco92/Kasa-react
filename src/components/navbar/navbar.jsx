@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <div className='navbar_logo'>
-        <img src={logo} alt='Logo du site Kasa' />
+        <a href="/"><img src={logo} alt='Logo du site Kasa' /></a>
       </div>
       <div className='navbar_menu'>
       <NavLink to="/">Accueil</NavLink>

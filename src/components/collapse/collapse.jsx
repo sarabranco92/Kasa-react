@@ -23,8 +23,8 @@ function Collapse({ title, content }) {
             </h3>
             <div className={`collapse_content ${toggle ? 'collapse_content_visible' : 'collapse_content_hidden'}`}>
                 {Array.isArray(content) ? content.map((item, index) => (
-                    <p key={index}>{item}</p>
-                )) : <p>{content}</p>}
+                    <div key={index}>{item}</div>
+                )) : <div>{content}</div>}
             </div>
         </div>
     );

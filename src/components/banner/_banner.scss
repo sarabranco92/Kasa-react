@@ -1,3 +1,5 @@
+/* Importation des mixins et variables utilitaires pour un style cohérent dans tout le projet. */
+
 @import '../../utils/mixin';
 @import '../../utils/variavel';
 
@@ -8,7 +10,7 @@
     .banner-image {
       position: relative;
       height: 200px;
-      width: 100%;
+      width: 100%; /* Pleine largeur pour s'étendre sur toute la bannière */
       border-radius: 10px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
       object-fit: cover;
@@ -16,10 +18,9 @@
   
     .banner-text {
       position: absolute;
-      left: 55%;
-      right: -50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      left: 46%; /* Positionnement horizontal */
+      top: 50%; /* Positionnement vertical */
+      transform: translate(-50%, -50%); /* Centrage de l'élément */
       color: $color-primary;
       margin: 0;
       text-align: center;
