@@ -49,4 +49,4 @@ Compétences Évaluées:
       Initialiser une application avec Create React App.
       
       
-      ![Capture d'écran 2023-11-30 134514](https://github.com/sarabranco92/Kasa-react/assets/132900005/687339da-5ed0-4448-a23c-a6ad7dd613bf)
+   ![Capture d'écran 2023-11-30 134514](https://github.com/sarabranco92/Kasa-react/assets/132900005/687339da-5ed0-4448-a23c-a6ad7dd613bf)
