@@ -12,6 +12,7 @@ import Rating from '../../components/rating/rating';
 import Footer from '../../components/footer/footer';
 import Center from '../../components/center/center';
 import Navbar from '../../components/navbar/navbar';
+import Spinner from '../../components/loader/loader';
 
 // Importation des styles spécifiques pour la page du logement
 import '../logement/_fiche_log.scss';
@@ -32,8 +33,10 @@ function FicheLogement() {
       // En cas d'absence du logement, on déclenche une erreur
       setIsError(true);
     } else {
-      // Si le logement est trouvé, on met à jour l'état avec ses détails
-      setLogement(record); 
+      
+     // setTimeout(() => {
+        setLogement(record);
+    //  }, 1000);
     }
   }, [id, navigate]);
 
@@ -45,7 +48,7 @@ function FicheLogement() {
 
   // Affichage d'un loader pendant le chargement des données
   if (!logement) {
-    return <>Loader</>; // Remplacer par un composant de chargement réel
+    return <Spinner />; // Utiliser le composant Spinner pendant le chargement
   }
 
   // Rendu de la page de détails du logement
