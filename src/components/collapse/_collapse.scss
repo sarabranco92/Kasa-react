@@ -30,7 +30,7 @@
       
       /* Media query pour adapter la taille de la flèche sur les écrans plus petits */
       @media(max-width: 1230px) {
-        width: 18px;
+        width: 16px;
       }
     }
   }
@@ -85,5 +85,16 @@
       margin-right: 0; /* Annulation de la marge à droite pour le dernier élément */
     }
   }
+  
 }
-
+  @media (max-width: 768px) {
+    .description-content {
+      flex-direction: column; /* Aligner les éléments en colonne sur les petits écrans */
+    }
+    
+    .description-content__description,
+    .description-content__equipement {
+      margin-right: 0; /* Annuler la marge à droite sur les petits écrans */
+      padding: 0;
+    }
+  }

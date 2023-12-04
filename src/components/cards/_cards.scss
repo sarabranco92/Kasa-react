@@ -1,6 +1,6 @@
 .logements {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-column-gap: 50px;
   grid-row-gap: 50px;
   justify-content: center;
@@ -14,12 +14,10 @@
     text-decoration: none;
   }
 
-  @media (max-width: 926px) {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
+ 
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     background: #FFF;
     padding: 0;
     grid-row-gap: 20px;

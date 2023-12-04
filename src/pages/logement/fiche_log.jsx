@@ -64,7 +64,7 @@ function FicheLogement() {
             <h1 className='Title'>{logement.title}</h1>
             <p className='Location'>{logement.location}</p>
             <ul className='TagsList'>
-              {logement.tags.map(tag => (
+              {logement.tags.map(tag => (    //Pour chaque tag dans le tableau logement.tags, la méthode .map() crée un élément de liste <li>.
                 <li className='TagItem' key={tag}>{tag}</li>
               ))}
             </ul>
