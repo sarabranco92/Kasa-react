@@ -1,35 +1,33 @@
-# Projet 8 -  Site  Kasa avec React et Sass
+# Kasa — React Rental Interface
 
-Dans le cadre de la modernisation de son service de location d'appartements, Kasa vous a recruté en tant que développeur front-end freelance pour travailler sur la refonte de sa plateforme web en utilisant une stack complète en JavaScript.
+A rental-listing interface built from supplied designs, with reusable React components.
 
-## Description du Projet
+**React · JavaScript · Sass · React Router**
 
-### Objectif
+[View website / demo](https://sarabranco92.github.io/Kasa-react/) · [Setup and technical guide](docs/PROJECT_GUIDE.md) · [Contact Sara](mailto:sbdev42@gmail.com)
 
-La mission est de démarrer le projet React et développer l'ensemble de l'application, les composants React, et les routes React Router, en suivant les maquettes responsives Figma et les contraintes techniques fournies.
+![Kasa — React Rental Interface preview](https://sarabranco.xyz/images/kasaSite.png)
 
-### Focus
+## Purpose and features
 
-Le projet met l'accent sur la refonte totale du site existant, avec une mise à jour technologique majeure pour améliorer les performances et l'expérience utilisateur.
+- Listing cards and detail pages backed by local JSON data
+- Image carousels, ratings and collapsible sections
+- About page and fallback routes
 
-## Spécifications
+## My work
 
-### Spécifications Fonctionnelles
+Frontend implementation from supplied designs within an OpenClassrooms project. See the technical guide for the implemented structure and configuration.
 
-- Développement d'une interface utilisateur pour la visualisation et la gestion de plus de 500 annonces quotidiennes.
-- Création de composants React dynamiques pour une meilleure interaction utilisateur.
+## Project status
 
-### Spécifications Techniques
+OpenClassrooms training project. This is a frontend demonstration, with no booking or payment backend. Documentation was reviewed against source on 3 October 2026. Builds, automated tests and complete demo workflows have not been verified.
 
-- **React :** Utiliser React pour le développement des composants front-end.
-- **React Router :** Configurer la navigation entre les pages de l'application.
-- **Sass :** Utiliser Sass pour générer le style CSS du site web.
-- **Animations CSS :** Mettre en place des animations CSS pour les menus déroulants.
+## Run locally
 
-## Compétences Acquises
+Follow [the project guide](docs/PROJECT_GUIDE.md) for commands, prerequisites, environment settings and verification steps.
 
-- **Développement React :** Construction d'une application web avec des composants React.
-- **Sass :** Utilisation avancée de Sass pour le style de l'application.
-- **Animations CSS :** Création d'animations pour enrichir l'expérience utilisateur.
-- **React Router :** Mise en place d'une navigation fluide entre les pages de l'application.
+## About the developer
 
+Sara Branco — web developer based in Bayonne, France. I work in **French, Portuguese and English**.
+
+[Portfolio](https://sarabranco.xyz) · [LinkedIn](https://www.linkedin.com/in/sarabranco92) · [Email](mailto:sbdev42@gmail.com)
