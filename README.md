@@ -33,3 +33,6 @@ Le projet met l'accent sur la refonte totale du site existant, avec une mise à 
 - **Animations CSS :** Création d'animations pour enrichir l'expérience utilisateur.
 - **React Router :** Mise en place d'une navigation fluide entre les pages de l'application.
 
+## Setup and maintenance guide
+
+See the [project guide](docs/PROJECT_GUIDE.md) for repository-specific setup, commands, configuration, implementation limits and verification steps.
